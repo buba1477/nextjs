@@ -36,6 +36,7 @@ const Users = ({users}) => {
 export default Users
 
 export async function getStaticProps(context) {
+    
     let response = await fetch('https://jsonplaceholder.typicode.com/users')
     let users = await response.json()
     return {
