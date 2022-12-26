@@ -8,7 +8,7 @@ const Users = ({ users }) => {
 
     return (
 
-        <MainContainer >
+        <MainContainer keywords = {'main users'}>
             <h1>Пользователи</h1>
             <Link legacyBehavior href="/">
                 <a>На главную</a>

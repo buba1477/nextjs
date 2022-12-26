@@ -6,7 +6,7 @@ const MainContainer = ({ children, keywords }) => {
     return (
         <>
             <Head>
-                <meta keywords={"amirchek" + keywords}></meta>
+                <meta keywords={"amirchek " + keywords}></meta>
                 <title>Главная</title>
             </Head>
 
