@@ -1,50 +1,16 @@
-import Link from "next/link"
-import A from "../components/A"
 
-const Index = () =>{
-    return(
+import MainContainer from "../components/MainContainer"
 
-        <div>
-         <div className="navbar">
-            
-            <A href={"/"} text="Главная" />
-            <A href={"/users"} text="Пользователи"/>
-            {/* <Link 
-            legacyBehavior href="/">
-            <a className="link">Главная</a>
-            </Link>
+const Index = () => {
+   return (
 
-            <Link 
-            legacyBehavior href="/users">
-            <a className="link">Пользователи</a>
-            </Link> */}
-            
-         </div>
-
+      <MainContainer>
 
          <h1>Главная страница</h1>
 
-         <style jsx>
-            {
-               `
-               .navbar {
-                background: green;
-                padding: 15px;
-               }
+      </MainContainer>
 
-               .link {
-                text-decoration: none;
-                color: white;
-                margin: 10px;
-                font-weight: bold;
-
-               }
-               `
-            }
-         </style>
-            
-        </div>
-    )
+   )
 }
 
 export default Index

@@ -1,13 +1,14 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import MainContainer from "../components/MainContainer"
 
 
-const Users = ({users}) => {
+const Users = ({ users }) => {
 
-    
+
     return (
 
-        <div >
+        <MainContainer >
             <h1>Пользователи</h1>
             <Link legacyBehavior href="/">
                 <a>На главную</a>
@@ -29,17 +30,17 @@ const Users = ({users}) => {
 
             </ul>
 
-        </div>
+        </MainContainer>
     )
 }
 
 export default Users
 
 export async function getStaticProps(context) {
-    
+
     let response = await fetch('https://jsonplaceholder.typicode.com/users')
     let users = await response.json()
     return {
-      props: {users}, // will be passed to the page component as props
+        props: { users }, // will be passed to the page component as props
     }
-  }
+}
