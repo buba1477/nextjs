@@ -3,9 +3,9 @@ import { useEffect, useState } from "react"
 import MainContainer from "../components/MainContainer"
 
 
-const Users = ({ users }) => {
+const Users = ({ users, test }) => {
 
-
+console.log(test)
     return (
 
         <MainContainer keywords = {'main users'}>
@@ -37,10 +37,12 @@ const Users = ({ users }) => {
 export default Users
 
 export async function getStaticProps(context) {
-
+    
     let response = await fetch('https://jsonplaceholder.typicode.com/users')
     let users = await response.json()
+    let test = "cartman"
+    
     return {
-        props: { users }, // will be passed to the page component as props
+        props: { users, test }, // will be passed to the page component as props
     }
 }

@@ -9,7 +9,7 @@ export default function ({user}) {
   
     return(
         <MainContainer keywords ={user.name}>
-         <div>
+         <div className={styles.style}>
             <h1 className={styles.cite}>Пользователь c ID { query.id}</h1>
             <div>Имя пользователя {user.name}</div>
         </div>
@@ -18,10 +18,11 @@ export default function ({user}) {
     )
 }
 
-export async function getServerSideProps({params}) {
-  console.log(params)
+export async function getServerSideProps(params) {
+    console.log(params)
     let response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
     let user = await response.json()
+   
     return {
       props: {user}, // will be passed to the page component as props
     }
